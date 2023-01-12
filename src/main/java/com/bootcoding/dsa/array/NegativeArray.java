@@ -1,4 +1,4 @@
-package com.bootcoding.dsa.Array;
+package com.bootcoding.dsa;
 
 public class NegativeArray {
     public static int[] ArrayOfNegativeElements(int[] digits) {
@@ -7,6 +7,7 @@ public class NegativeArray {
             if (digits[i] < 0) {
                 negElements[i] = digits[i];
             }
+
         }
         return digits;
     }
@@ -15,9 +16,9 @@ public class NegativeArray {
         int[] nums = {10, -29, 30, -12};
         int[] result = ArrayOfNegativeElements(nums);
         for (int i = 0; i < result.length; i++) {
-            if (result[i] < 0) {
+            //if (result[i] < 0) {
                 System.out.println(result[i]);
-            }
+
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.bootcoding.dsa.Array;
+package com.bootcoding.dsa;
 
 public class PositiveArray {
     public static int[] ArrayOfPositiveElements(int[] digits) {

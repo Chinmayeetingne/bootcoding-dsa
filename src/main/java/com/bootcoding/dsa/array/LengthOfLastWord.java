@@ -1,4 +1,4 @@
-package com.bootcoding.dsa.Array;
+package com.bootcoding.dsa.array;
 
 public class LengthOfLastWord {
     public static int lengthOfLastWord(String s) {
