@@ -1,24 +1,35 @@
-package com.bootcoding.dsa;
+package com.bootcoding.dsa.array;
 
 public class NegativeArray {
-    public static int[] ArrayOfNegativeElements(int[] digits) {
-        int negElements[] = new int[digits.length];
-        for (int i = 0; i < digits.length; i++) {
-            if (digits[i] < 0) {
-                negElements[i] = digits[i];
-            }
-
-        }
-        return digits;
-    }
-
     public static void main(String[] args) {
-        int[] nums = {10, -29, 30, -12};
-        int[] result = ArrayOfNegativeElements(nums);
-        for (int i = 0; i < result.length; i++) {
-            //if (result[i] < 0) {
-                System.out.println(result[i]);
-
+        int[] nums = {1, -2, 3, -4};
+        int[] neg = findNegativeElements(nums);
+        System.out.println("Negative Array");
+        for (int i = 0; i < neg.length; i++) {
+            System.out.println(neg[i]);
         }
+
+    }
+    public static int[] findNegativeElements(int[] nums) {
+        int CountOfNeg = getNegativeCounter(nums) ;
+        int[] negcollector = new int[CountOfNeg];
+        int j =0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < 0) {
+                negcollector[j++] = nums[i];
+            }
+        }
+        return negcollector;
+    }
+    public static int getNegativeCounter(int[] nums){
+        int counter = 0;
+        for (int i =0; i<nums.length;i++){
+            if(nums[i]<0) {
+                counter++;
+            }
+        }
+        return counter;
+
     }
 }
+
