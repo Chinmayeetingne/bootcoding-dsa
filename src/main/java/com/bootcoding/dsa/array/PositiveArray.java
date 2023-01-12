@@ -1,23 +1,34 @@
-package com.bootcoding.dsa;
+package com.bootcoding.dsa.array;
 
 public class PositiveArray {
-    public static int[] ArrayOfPositiveElements(int[] digits) {
-        int PosElements[] = new int[digits.length];
-        for (int i = 0; i < digits.length; i++) {
-            if (digits[i] > 0 ) {
-                PosElements[i] = digits[i];
-            }
+    public static void main(String[] args) {
+        int[] nums = {1, -2, 3, -4};
+        int[] pos = findPositiveElements(nums);
+        System.out.println("Positive Array");
+        for (int i = 0; i < pos.length; i++) {
+            System.out.println(pos[i]);
         }
-        return digits;
     }
 
-    public static void main(String[] args) {
-        int[] nums = {10, -29, 30, -12};
-        int[] result = ArrayOfPositiveElements(nums);
-        for (int i = 0; i < result.length; i++) {
-            if (result[i] > 0) {
-                System.out.println(result[i]);
+    public static int[] findPositiveElements(int[] nums) {
+        int countOfPos = getPositiveElements(nums) ;
+        int[] posCollector = new int[countOfPos];
+        int j =0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
+                posCollector[j++] = nums[i];
             }
         }
+        return posCollector;
+    }
+    public static int getPositiveElements(int[] nums){
+        int counter = 0;
+        for (int i =0; i<nums.length;i++){
+            if(nums[i]>0) {
+                counter++;
+            }
+        }
+        return counter;
     }
 }
+
