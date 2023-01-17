@@ -2,6 +2,7 @@ package com.bootcoding.dsa.linkedlist;
 
 import java.util.LinkedList;
 
+
 public class Node {
     int data;
     Node next;
@@ -32,27 +33,7 @@ public class Node {
             temp = temp.next;
         }
     }
-    //inserting node at first position
-    /*public static Node firstInsert(Node head){
-        Node newNode = new Node(70);
-        newNode.next = head;
-        head = newNode;
-        return head;
-    }
-
-    //inserting node at last position
-    public static void lastInsertNode(Node head)
-    {
-        Node temp = head;
-        Node newNode = new Node(50);
-        System.out.println(head);
-        while (temp.next != null)
-        {
-            temp = temp.next;
-        }
-        temp.next = newNode;
-    }*/
-
+   
     public static void main(String[] args) {
         createLinkedList();
         printLinkedList(createLinkedList());
