@@ -14,11 +14,13 @@ public class Node {
 
     //creating linkedlist
     public static Node createLinkedList() {
+        //creation of linked list
         Node firstNode = new Node(10);
         Node secondNode = new Node(20);
         Node thirdNode = new Node(30);
         Node fourthNode = new Node(40);
 
+        //linking of list
         Node head = firstNode;
         head.next = secondNode;
         secondNode.next = thirdNode;
@@ -55,8 +57,15 @@ public class Node {
         }
         System.out.println();
     }
-
-
+    public static void lengthOfLinkedList(Node head){
+        Node temp = head;
+        int count = 0;
+        while(temp != null){
+            temp=temp.next;
+            count++;
+        }
+        System.out.println(count);
+    }
     public static void main(String[] args) {
         Node head = createLinkedList();
         printLinkedList(head);
@@ -64,6 +73,7 @@ public class Node {
         printLinkedList(insertNodeAtFirst(head));
         insertNodeByLast(head);
         printLinkedList(insertNodeByLast(head));
+        lengthOfLinkedList(head);
 
     }
 }
