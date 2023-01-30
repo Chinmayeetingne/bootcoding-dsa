@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int a[] = {50,25,100,3,39};
-        System.out.println(Arrays.toString(selectionSort(a)));
+       selectionSort(a);
     }
 
-    public static int[] selectionSort(int[] a) {
+    public static void selectionSort(int[] a) {
         for (int i = 0; i < a.length ; i++) {
            int minIndex = i;
             for (int j = i + 1; j < a.length; j++) {
@@ -20,6 +20,8 @@ public class SelectionSort {
             a[i] = a[minIndex];
             a[minIndex] = temp;
         }
-        return a;
+        for(int i=0;i<a.length;i++){
+            System.out.println(a[i]+ " ");
+        }
     }
 }
