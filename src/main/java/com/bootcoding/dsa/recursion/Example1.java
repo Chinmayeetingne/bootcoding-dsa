@@ -6,7 +6,7 @@ public class Example1 {
         print(n);
     }
     public static void print(int n){
-        if(n == 0){
+        if(n == 0 ){
             return;
         }
         print(n-1);
