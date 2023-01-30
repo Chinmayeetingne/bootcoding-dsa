@@ -18,5 +18,4 @@ public class powerOfTwo {
         }
         return isPowerOfTwo(n/2);
     }
-
 }
