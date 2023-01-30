@@ -6,8 +6,14 @@ public class FibonacciNumber {
     static HashMap<Integer , Integer> cache = new HashMap<>();
 
     public static void main(String[] args) {
-        System.out.println(fib(5));
-        System.out.println(fibMemoization(5));
+
+        //to calculate the time required
+        long start = System.currentTimeMillis();
+        System.out.println(fib(25));
+        System.out.println("Total Time (ns):" +(System.currentTimeMillis() - start));
+        long start2 = System.currentTimeMillis();
+        System.out.println(fibMemoization(25));
+        System.out.println("Total Time (memoization) (ns): " + (System.currentTimeMillis() - start2));
     }
     public static int fib(int n){
         if(n == 0 || n == 1){
