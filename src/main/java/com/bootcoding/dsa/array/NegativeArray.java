@@ -12,14 +12,14 @@ public class NegativeArray {
     }
     public static int[] findNegativeElements(int[] nums) {
         int CountOfNeg = getNegativeCounter(nums) ;
-        int[] negcollector = new int[CountOfNeg];
+        int[] negCollector = new int[CountOfNeg];
         int j =0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] < 0) {
-                negcollector[j++] = nums[i];
+                negCollector[j++] = nums[i];
             }
         }
-        return negcollector;
+        return negCollector;
     }
     public static int getNegativeCounter(int[] nums){
         int counter = 0;
