@@ -3,13 +3,10 @@ package com.bootcoding.dsa.linkedlist;
 public class LinkedListCycle {
     public static void main(String[] args) {
 
-
-
         Node firstNode = new Node(3);
         Node secondNode = new Node(2);
         Node thirdNode = new Node(0);
         Node fourthNode = new Node(-4);
-
 
         Node head = firstNode;
         firstNode.next = secondNode;
