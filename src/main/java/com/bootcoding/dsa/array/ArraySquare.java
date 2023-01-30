@@ -11,11 +11,12 @@ public class ArraySquare {
 
     public static void main(String[] args) {
 
-        int[] nums = {2, 4, 6};
+        int[] nums = {-4, -1, 0, 3, 10};
         int[] result = SquareOfArrayElements(nums);
         for (int i = 0; i < nums.length; i++) {
             System.out.println(result[i]);
         }
+
     }
 }
 
