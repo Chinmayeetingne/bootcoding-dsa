@@ -8,15 +8,13 @@ public class BinarySearch {
         System.out.println(x + " is found at " + index);
     }
     public static int binarySearch(int a[] ,int x ,int left, int right){
-
         int mid = (left + right) /2;
         if(x == a[mid]){
             return mid;
         }
-        if(left == right){
+        if(left >= right){
             return -1;
         }
-
         if(x>a[mid]){
             return binarySearch(a,x ,mid+1 ,right);
         }else{
