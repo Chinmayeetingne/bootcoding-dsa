@@ -1,7 +1,7 @@
 package com.bootcoding.dsa.sorting;
 
 public class BubbleSort {
-    public static void main(String[] args) {
+    static public  void main(String[] args) {
         int a[]= {50,17,19,13,5};
         bubbleSort(a);
     }
