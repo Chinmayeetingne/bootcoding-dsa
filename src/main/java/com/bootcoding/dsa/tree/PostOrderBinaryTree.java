@@ -47,7 +47,7 @@ public class PostOrderBinaryTree {
         }
         postOrder(root.left);
         postOrder(root.right);
-        System.out.println(root.data);
+        System.out.print(root.data + " , ");
 
     }
 }
